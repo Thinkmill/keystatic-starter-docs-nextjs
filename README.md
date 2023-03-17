@@ -4,7 +4,7 @@ This is a basic docs template using Keystatic as a CMS.
 It uses:
 
 - [Keystatic](https://github.com/Thinkmill/keystatic)
-- Astro
+- Next.js
 - TailwindCSS
 
 ## License
