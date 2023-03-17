@@ -1,5 +1,5 @@
 import { createReader } from "@keystatic/core/reader";
-import config from "../keystatic.config";
+import config from "../../keystatic.config";
 import { inject } from "@/utils/slugHelpers";
 
 const reader = createReader("", config);

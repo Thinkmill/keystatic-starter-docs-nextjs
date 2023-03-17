@@ -2,10 +2,10 @@
   "name": "keystatic-starter-docs",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "cd docs && next dev",
+    "build": "cd docs && next build",
+    "start": "cd docs && next start",
+    "lint": "cd docs && next lint"
   },
   "dependencies": {
     "@keystatic/core": "^0.0.66",

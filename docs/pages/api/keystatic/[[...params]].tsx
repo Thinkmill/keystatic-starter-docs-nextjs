@@ -1,5 +1,5 @@
 import { makeAPIRouteHandler } from "@keystatic/next/api";
-import keystaticConfig from "../../../keystatic.config";
+import keystaticConfig from "../../../../keystatic.config";
 
 export const config = {
   api: {
