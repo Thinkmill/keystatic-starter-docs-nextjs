@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { createReader } from "@keystatic/core/reader";
-import { DocumentRenderer } from "@keystone-6/document-renderer";
+import { DocumentRenderer } from "@keystatic/core/renderer";
 import config from "../keystatic.config";
 import { inject } from "@/utils/slugHelpers";
 import { InferGetStaticPropsType } from "next";
