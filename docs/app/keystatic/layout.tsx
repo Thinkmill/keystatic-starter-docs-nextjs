@@ -1,4 +1,4 @@
-import KeystaticApp from './keystatic'
+import KeystaticApp from "./keystatic";
 
 export default function RootLayout() {
   return (
@@ -8,5 +8,5 @@ export default function RootLayout() {
         <KeystaticApp />
       </body>
     </html>
-  )
+  );
 }

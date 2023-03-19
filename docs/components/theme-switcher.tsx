@@ -1,11 +1,11 @@
-import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
-import { Button } from '@voussoir/button';
-import { VoussoirProvider, VoussoirProviderProps } from '@voussoir/core';
-import { moonIcon } from '@voussoir/icon/icons/moonIcon';
-import { sunIcon } from '@voussoir/icon/icons/sunIcon';
-import { Icon } from '@voussoir/icon';
-import { useIsSSR } from '@voussoir/ssr';
+import { Button } from "@voussoir/button";
+import { VoussoirProvider, VoussoirProviderProps } from "@voussoir/core";
+import { moonIcon } from "@voussoir/icon/icons/moonIcon";
+import { sunIcon } from "@voussoir/icon/icons/sunIcon";
+import { Icon } from "@voussoir/icon";
+import { useIsSSR } from "@voussoir/ssr";
 
 export function ThemeProvider({
   children,
@@ -30,13 +30,13 @@ export function ThemeProvider({
 export function ThemeSwitcher() {
   let colorScheme = useCurrentColorScheme();
   let onPress = () => {
-    localStorage.theme = colorScheme === 'dark' ? 'light' : 'dark';
-    window.dispatchEvent(new Event('storage'));
+    localStorage.theme = colorScheme === "dark" ? "light" : "dark";
+    window.dispatchEvent(new Event("storage"));
   };
 
-  const nextScheme = colorScheme === 'light' ? 'dark' : 'light';
+  const nextScheme = colorScheme === "light" ? "dark" : "light";
   const label = `Switch to ${nextScheme} theme`;
-  const icon = colorScheme === 'dark' ? sunIcon : moonIcon;
+  const icon = colorScheme === "dark" ? sunIcon : moonIcon;
 
   return (
     <div title={label} role="presentation">
@@ -52,7 +52,7 @@ export function ClientOnly({ children }: { children: React.ReactElement }) {
 }
 
 function ssrSafeHook<T>(hook: T) {
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return () => {};
   }
 
@@ -61,9 +61,9 @@ function ssrSafeHook<T>(hook: T) {
 export const useCurrentColorScheme = ssrSafeHook(useColorSchemeInternal);
 
 function useColorSchemeInternal() {
-  let mq = useMemo(() => window.matchMedia('(prefers-color-scheme: dark)'), []);
+  let mq = useMemo(() => window.matchMedia("(prefers-color-scheme: dark)"), []);
   let getCurrentColorScheme = useCallback(
-    () => localStorage.theme || (mq.matches ? 'dark' : 'light'),
+    () => localStorage.theme || (mq.matches ? "dark" : "light"),
     [mq]
   );
   let [colorScheme, setColorScheme] = useState(() => getCurrentColorScheme());
@@ -74,10 +74,10 @@ function useColorSchemeInternal() {
     };
 
     mq.addListener(onChange);
-    window.addEventListener('storage', onChange);
+    window.addEventListener("storage", onChange);
     return () => {
       mq.removeListener(onChange);
-      window.removeEventListener('storage', onChange);
+      window.removeEventListener("storage", onChange);
     };
   }, [getCurrentColorScheme, mq]);
 

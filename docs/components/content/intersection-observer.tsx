@@ -6,7 +6,7 @@ import {
   useMemo,
   useRef,
   useState,
-} from 'react';
+} from "react";
 
 type IntersectionObserverContextType = {
   observe?: (target: Element) => () => void;
@@ -18,7 +18,7 @@ const IntersectionObserverContext = createContext<
 >(undefined);
 
 const merge = <T, K>(keyof: (item: T) => K, ...args: (readonly T[])[]): T[] => {
-  const entries = args.flat().map(item => [keyof(item), item] as const);
+  const entries = args.flat().map((item) => [keyof(item), item] as const);
   return Array.from(new Map(entries).values());
 };
 
@@ -32,15 +32,15 @@ export const IntersectionObserverProvider = ({
   options?: IntersectionObserverInit;
 }) => {
   const [entries, setEntries] = useState<
-    IntersectionObserverContextType['entries']
+    IntersectionObserverContextType["entries"]
   >([]);
 
   const observer = useMemo(() => {
-    if (typeof IntersectionObserver === 'undefined') return;
+    if (typeof IntersectionObserver === "undefined") return;
     return new IntersectionObserver(
-      entries =>
-        setEntries(prevEntries =>
-          merge(entry => entry.target, prevEntries, entries)
+      (entries) =>
+        setEntries((prevEntries) =>
+          merge((entry) => entry.target, prevEntries, entries)
         ),
       options
     );
@@ -57,7 +57,9 @@ export const IntersectionObserverProvider = ({
       observer.observe(target);
       return () => {
         observer.unobserve(target);
-        setEntries(entries => entries.filter(entry => entry.target !== target));
+        setEntries((entries) =>
+          entries.filter((entry) => entry.target !== target)
+        );
       };
     };
   }, [observer]);
@@ -73,7 +75,7 @@ export const useObserve = <T extends Element>() => {
   const context = useContext(IntersectionObserverContext);
   if (context === undefined) {
     throw new Error(
-      'useObserve must be used within a IntersectionObserverProvider'
+      "useObserve must be used within a IntersectionObserverProvider"
     );
   }
   const { observe } = context;
@@ -89,7 +91,7 @@ export const useEntries = () => {
   const context = useContext(IntersectionObserverContext);
   if (context === undefined) {
     throw new Error(
-      'useEntries must be used within a IntersectionObserverProvider'
+      "useEntries must be used within a IntersectionObserverProvider"
     );
   }
   return context.entries;

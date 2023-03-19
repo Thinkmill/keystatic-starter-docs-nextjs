@@ -5,12 +5,12 @@ import {
   useContext,
   useEffect,
   useState,
-} from 'react';
+} from "react";
 
 type SidebarProviderProps = { children: ReactNode };
 type SidebarContextType = ReturnType<typeof useSidebar>;
 const SidebarContext = createContext<SidebarContextType | null>(null);
-const ERROR_MESSAGE = 'Attempt to use `Sidebar` outside of `SidebarProvider`.';
+const ERROR_MESSAGE = "Attempt to use `Sidebar` outside of `SidebarProvider`.";
 
 export const SidebarProvider = (props: SidebarProviderProps) => {
   const ctx = useSidebar();
@@ -28,14 +28,14 @@ function useSidebar() {
   const [sidebarIsOpen, setSidebarOpen] = useState(false);
   const openSidebar = useCallback(() => setSidebarOpen(true), []);
   const closeSidebar = useCallback(() => setSidebarOpen(false), []);
-  const toggleSidebar = useCallback(() => setSidebarOpen(bool => !bool), []);
+  const toggleSidebar = useCallback(() => setSidebarOpen((bool) => !bool), []);
 
   useEffect(() => {
     if (sidebarIsOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
 
       return () => {
-        document.body.style.overflow = '';
+        document.body.style.overflow = "";
       };
     }
   }, [sidebarIsOpen]);

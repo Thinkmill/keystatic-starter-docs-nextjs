@@ -1,7 +1,7 @@
-import NextLink from 'next/link';
-import { ForwardedRef } from 'react';
+import NextLink from "next/link";
+import { ForwardedRef } from "react";
 
-import { makeLinkComponent } from '@voussoir/link';
+import { makeLinkComponent } from "@voussoir/link";
 
 /**
  * Resolves internal links using the
@@ -16,7 +16,7 @@ import { makeLinkComponent } from '@voussoir/link';
  */
 export const UniversalNextLink = makeLinkComponent(
   ({ href, onClick, rel, ...props }, ref: ForwardedRef<HTMLAnchorElement>) => {
-    const shouldUseNext = href[0] === '/' && href[1] !== '/';
+    const shouldUseNext = href[0] === "/" && href[1] !== "/";
 
     return shouldUseNext ? (
       <NextLink href={href} ref={ref} {...props} />
@@ -24,13 +24,13 @@ export const UniversalNextLink = makeLinkComponent(
       <a
         ref={ref}
         href={href}
-        rel={rel || 'noreferrer noopener'}
-        onClick={event => {
-          if (href === '' || href === '#') {
+        rel={rel || "noreferrer noopener"}
+        onClick={(event) => {
+          if (href === "" || href === "#") {
             event.preventDefault();
           }
 
-          if (typeof onClick === 'function') {
+          if (typeof onClick === "function") {
             onClick(event);
           }
         }}
