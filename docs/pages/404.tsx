@@ -10,7 +10,7 @@ const notFound = () => {
   return (
     <DocsContent>
       <h1>404</h1>
-      <h2>This page could not be found</h2>
+      <h2>Sorry, this page could not be found</h2>
     </DocsContent>
   );
 };
