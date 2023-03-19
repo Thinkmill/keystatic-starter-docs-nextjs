@@ -6,7 +6,7 @@ import { Layout } from "@/components/layout";
 import { PostProps } from ".";
 import { SidebarItem } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-switcher";
-import { UniversalNextLink } from "@/components/UniversalNextLink";
+import { UniversalNextLink } from "@/components/universal-next-link";
 
 const singletons = [
   {

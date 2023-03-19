@@ -1,15 +1,17 @@
 import { createReader } from "@keystatic/core/reader";
+
 import config from "../keystatic.config";
+import { DocsContent } from "@/components/content";
 import { inject } from "@/utils/slug-helpers";
 
 const reader = createReader("", config);
 
 const notFound = () => {
   return (
-    <>
+    <DocsContent>
       <h1>404</h1>
       <h2>This page could not be found</h2>
-    </>
+    </DocsContent>
   );
 };
 
