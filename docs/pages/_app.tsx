@@ -22,16 +22,17 @@ export default function App({
   pageProps,
 }: AppProps<{ pages: PostProps[] }>) {
   const { pages } = pageProps;
-  const pagesNav = pages.reduce((prev, curr) => {
-    // if the page is not "published" do not add it to the navigation
-    if (!curr.publishedDate) return prev;
+  const pagesNav =
+    pages?.reduce((prev, curr) => {
+      // if the page is not "published" do not add it to the navigation
+      if (!curr.publishedDate) return prev;
 
-    const navigationItem = {
-      name: curr.title,
-      href: curr.slug,
-    };
-    return [navigationItem, ...prev];
-  }, []);
+      const navigationItem = {
+        name: curr.title,
+        href: curr.slug,
+      };
+      return [navigationItem, ...prev];
+    }, []) || [];
 
   const navigation = [
     ...singletons,
