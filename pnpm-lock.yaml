@@ -3,12 +3,24 @@ lockfileVersion: 5.4
 specifiers:
   '@keystatic/core': ^0.0.66
   '@keystatic/next': ^0.0.4
+  '@markdoc/markdoc': ^0.2.2
   '@tailwindcss/typography': ^0.5.9
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@voussoir/button': ^0.1.2
+  '@voussoir/core': ^4.0.1
+  '@voussoir/icon': ^0.1.0
+  '@voussoir/icons': ^0.3.0
+  '@voussoir/layout': ^0.1.0
+  '@voussoir/link': ^0.1.0
+  '@voussoir/nav-list': ^0.1.0
+  '@voussoir/ssr': ^0.1.0
+  '@voussoir/style': ^0.1.1
+  '@voussoir/typography': ^0.1.0
   autoprefixer: ^10.4.14
   next: 13.2.4
+  next-seo: ^5.15.0
   postcss: ^8.4.21
   react: 18.2.0
   react-dom: 18.2.0
@@ -20,10 +32,22 @@ specifiers:
 dependencies:
   '@keystatic/core': 0.0.66_biqbaboplfbrettd7655fr4n2y
   '@keystatic/next': 0.0.4_tou233xdmzt4ofealqcjeepd4i
+  '@markdoc/markdoc': 0.2.2_pmekkgnqduwlme35zpnqhenc34
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@voussoir/button': 0.1.2_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/core': 4.0.1_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/icon': 0.1.0_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/icons': 0.3.0_react@18.2.0
+  '@voussoir/layout': 0.1.0_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/link': 0.1.0_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/nav-list': 0.1.0_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/ssr': 0.1.0_react@18.2.0
+  '@voussoir/style': 0.1.1_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/typography': 0.1.0_biqbaboplfbrettd7655fr4n2y
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+  next-seo: 5.15.0_ld2jel3hspngo3u5lti2kgl2sq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-focus-lock: 2.9.4_pmekkgnqduwlme35zpnqhenc34
@@ -2079,6 +2103,15 @@ packages:
       - react-dom
     dev: false
 
+  /@voussoir/icons/0.3.0_react@18.2.0:
+    resolution: {integrity: sha512-JNhrDkniALDEFB2+wsRzeNrEnVyYHX69KRYRPl1DreDSL08fa3xmVplV+oZqpZL+CrIImA/LdN3uLeMLkEIDGw==}
+    engines: {node: '>=8.4.0'}
+    peerDependencies:
+      react: 16.7.0-alpha.2
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@voussoir/image/0.1.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-g6zDc4YyYoeDf7PCMU+7EaMR9xOAKSviqzvueumo2DfjJUZ/4juti/PTZbrHiPVUR8p5oCAbzB51+HMDNBrnBQ==}
     engines: {node: '>= 14.13'}
@@ -3517,6 +3550,18 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /next-seo/5.15.0_ld2jel3hspngo3u5lti2kgl2sq:
+    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /next/13.2.4_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}

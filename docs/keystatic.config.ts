@@ -2,24 +2,24 @@ import {
   collection,
   config,
   fields,
-  // GitHubConfig,
-  // LocalConfig,
+  GitHubConfig,
+  LocalConfig,
   singleton,
 } from "@keystatic/core";
 
-// const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
-//   process.env.NODE_ENV === "development"
-//     ? { kind: "local" }
-//     : {
-//         kind: "github",
-//         repo: {
-//           owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER!,
-//           name: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG!,
-//         },
-//       };
+const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
+  process.env.NODE_ENV === "development"
+    ? { kind: "local" }
+    : {
+        kind: "github",
+        repo: {
+          owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER!,
+          name: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG!,
+        },
+      };
 
 export default config({
-  storage: { kind: "local" },
+  storage,
   singletons: {
     index: singleton({
       label: "Introduction",
@@ -53,12 +53,6 @@ export default config({
           validation: { length: { min: 4 } },
         }),
         publishedDate: fields.date({ label: "Published Date" }),
-        images: fields.array({
-          ...fields.object({
-            image: fields.image({ label: "Image", directory: "public" }),
-            alt: fields.text({ label: "Alt text" }),
-          }),
-        }),
         content: fields.document({
           label: "Content",
           formatting: true,

@@ -1,10 +1,12 @@
-import Head from "next/head";
 import { createReader } from "@keystatic/core/reader";
-import config from "../../keystatic.config";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import { inject } from "@/utils/slugHelpers";
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
+import Head from "next/head";
 import invariant from "tiny-invariant";
+
+import { DocsContent } from "@/components/content";
+import { inject } from "@/utils/slug-helpers";
+import config from "../keystatic.config";
 
 const reader = createReader("", config);
 
@@ -18,7 +20,6 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const post = pages.find((el) => el.slug === slug);
   invariant(post, "Unable to match slug to post in array");
-  console.log(post);
 
   return (
     <>
@@ -28,23 +29,9 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ul className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 mb-16">
-        {post.images?.map(
-          (el) =>
-            el.image && (
-              <li>
-                <img
-                  src={`/${post.slug}/${el.image}`}
-                  alt={el.alt}
-                  key={el.image}
-                />
-              </li>
-            )
-        )}
-      </ul>
-      <div className="prose">
+      <DocsContent>
         {post.content && <DocumentRenderer document={post.content} />}
-      </div>
+      </DocsContent>
     </>
   );
 }

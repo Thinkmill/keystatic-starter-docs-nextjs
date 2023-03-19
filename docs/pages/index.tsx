@@ -1,9 +1,11 @@
-import Head from "next/head";
 import { createReader } from "@keystatic/core/reader";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import config from "../../keystatic.config";
-import { inject } from "@/utils/slugHelpers";
 import { InferGetStaticPropsType } from "next";
+import Head from "next/head";
+
+import { DocsContent } from "../components/content";
+import { inject } from "@/utils/slug-helpers";
+import config from "../keystatic.config";
 
 const reader = createReader("", config);
 
@@ -22,9 +24,9 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="prose">
+      <DocsContent>
         {home.content && <DocumentRenderer document={home.content} />}
-      </div>
+      </DocsContent>
     </>
   );
 }
