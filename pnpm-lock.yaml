@@ -26,6 +26,7 @@ importers:
       '@keystatic/core': ^0.0.68
       '@keystatic/next': ^0.0.5
       '@markdoc/markdoc': ^0.2.2
+      '@preconstruct/next': ^4.0.0
       '@tailwindcss/typography': ^0.5.9
       '@types/node': 18.15.0
       '@types/react': 18.0.28
@@ -55,6 +56,7 @@ importers:
       '@keystatic/core': 0.0.68_biqbaboplfbrettd7655fr4n2y
       '@keystatic/next': 0.0.5_bxkoiskmhgtlccvhg6aumkfdya
       '@markdoc/markdoc': 0.2.2_pmekkgnqduwlme35zpnqhenc34
+      '@preconstruct/next': 4.0.0
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
       '@types/node': 18.15.0
       '@types/react': 18.0.28
@@ -82,8 +84,10 @@ importers:
 
   packages/button:
     specifiers:
+      '@types/react': ^18.0.25
       react: ^18.2.0
     devDependencies:
+      '@types/react': 18.0.28
       react: 18.2.0
 
 packages:
@@ -1946,6 +1950,10 @@ packages:
       - supports-color
     dev: false
 
+  /@preconstruct/next/4.0.0:
+    resolution: {integrity: sha512-vSrc8wFQgBErU7dKTKSQtr/DLWPHcN9jMoiWOAQodB1+B4Kpqqry6QhGYoRm0DQU5gNL+Rcp+Xb350O1E/gjsg==}
+    dev: false
+
   /@react-aria/actiongroup/3.5.1_react@18.2.0:
     resolution: {integrity: sha512-qSI3H60083TNbRo3PVZisJAlOe9uD86+ESHvq/tWCbD+jkmstDOM4lNAFPt1EqXXu1IRNlWiHCVMTE7LKBucGg==}
     peerDependencies:
@@ -3216,7 +3224,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
 
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
@@ -3230,7 +3237,6 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: false
 
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -3240,7 +3246,6 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: false
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
@@ -4534,7 +4539,6 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
-    dev: false
 
   /dataloader/2.2.2:
     resolution: {integrity: sha512-8YnDaaf7N3k/q5HnTJVuzSyLETjoZjVmHc4AeKAzOvKHEFQKcn64OKBfzHYtE9zGjctNM7V9I0MfnUVLpi7M5g==}
