@@ -1,4 +1,3 @@
-import { createReader } from "@keystatic/core/reader";
 import { DocumentRenderer } from "@keystatic/core/renderer";
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
@@ -6,9 +5,7 @@ import invariant from "tiny-invariant";
 
 import { DocsContent } from "@/components/content";
 import { inject } from "@/utils/slug-helpers";
-import config from "../keystatic.config";
-
-const reader = createReader("", config);
+import { reader } from "@/utils/reader";
 
 export type PostProps = InferGetStaticPropsType<
   typeof getStaticProps

@@ -23,7 +23,7 @@ export default config({
   singletons: {
     index: singleton({
       label: "Introduction",
-      path: "content/singletons/index/",
+      path: "docs/content/singletons/index/",
       schema: {
         content: fields.document({
           label: "Content",
@@ -35,7 +35,7 @@ export default config({
   collections: {
     pages: collection({
       label: "Pages",
-      path: "content/pages/*/",
+      path: "docs/content/pages/*/",
       slugField: "title",
       schema: {
         title: fields.slug({

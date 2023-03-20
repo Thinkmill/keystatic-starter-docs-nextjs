@@ -10,4 +10,7 @@ export const config = {
   },
 };
 
-export default makeAPIRouteHandler({ config: keystaticConfig });
+export default makeAPIRouteHandler({
+  config: keystaticConfig,
+  localBaseDirectory: "..",
+});

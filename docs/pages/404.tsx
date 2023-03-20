@@ -1,10 +1,6 @@
-import { createReader } from "@keystatic/core/reader";
-
-import config from "../keystatic.config";
 import { DocsContent } from "@/components/content";
+import { reader } from "@/utils/reader";
 import { inject } from "@/utils/slug-helpers";
-
-const reader = createReader("", config);
 
 const notFound = () => {
   return (
