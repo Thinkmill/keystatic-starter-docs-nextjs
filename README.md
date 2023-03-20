@@ -5,6 +5,7 @@ It uses:
 
 - [Keystatic](https://github.com/Thinkmill/keystatic)
 - Next.js
+- TailwindCSS
 
 ## License
 

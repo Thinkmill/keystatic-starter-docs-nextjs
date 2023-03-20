@@ -1,3 +1,4 @@
+import "@/styles/globals.css";
 import { injectVoussoirStyles } from "@voussoir/core";
 import { SSRProvider } from "@voussoir/ssr";
 import type { AppProps } from "next/app";
