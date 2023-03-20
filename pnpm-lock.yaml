@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@keystatic/core': ^0.0.66
-  '@keystatic/next': ^0.0.4
+  '@keystatic/core': ^0.0.68
+  '@keystatic/next': ^0.0.5
   '@markdoc/markdoc': ^0.2.2
   '@tailwindcss/typography': ^0.5.9
   '@types/node': 18.15.0
@@ -30,8 +30,8 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@keystatic/core': 0.0.66_biqbaboplfbrettd7655fr4n2y
-  '@keystatic/next': 0.0.4_tou233xdmzt4ofealqcjeepd4i
+  '@keystatic/core': 0.0.68_biqbaboplfbrettd7655fr4n2y
+  '@keystatic/next': 0.0.5_bxkoiskmhgtlccvhg6aumkfdya
   '@markdoc/markdoc': 0.2.2_pmekkgnqduwlme35zpnqhenc34
   '@types/node': 18.15.0
   '@types/react': 18.0.28
@@ -315,8 +315,8 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: false
 
-  /@keystatic/core/0.0.66_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-NNwQdsPorgLGWSrTok0oGZ2+cxh3PdQJ3nqvATYGOLzDFXeRvKfInk4iR/K1n9fhMCEtXxg++cunbnJLao7REQ==}
+  /@keystatic/core/0.0.68_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-cfdQ2//t/5zwGxt7ZaSC1XbFWcDKMT5lgIALjj41AfpLMZmzX7MT3SwCvlj2QvNy7V0KZF62F1AnFsIqW8/02w==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -412,8 +412,8 @@ packages:
       - supports-color
     dev: false
 
-  /@keystatic/next/0.0.4_tou233xdmzt4ofealqcjeepd4i:
-    resolution: {integrity: sha512-ZET1vEl0P6k3O/Fxvr+idqKbxqwNPadQmBCabR5/8D7KQPZScRCERglhIz17wjO/SWEiNh+jLfvZVhNqxMYz/Q==}
+  /@keystatic/next/0.0.5_bxkoiskmhgtlccvhg6aumkfdya:
+    resolution: {integrity: sha512-trUoT1v9I3eRp0dIlqdeLN0PNRKOqLD0aM8ARX+FFNQnEAp0/zg8hpwceewcYy/CkD5X3wBPgRjMe3FIYBrE5Q==}
     peerDependencies:
       '@keystatic/core': '*'
       next: '13'
@@ -421,7 +421,7 @@ packages:
       react-dom: ^18.2.0
     dependencies:
       '@babel/runtime': 7.21.0
-      '@keystatic/core': 0.0.66_biqbaboplfbrettd7655fr4n2y
+      '@keystatic/core': 0.0.68_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.28
       next: 13.2.4_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0

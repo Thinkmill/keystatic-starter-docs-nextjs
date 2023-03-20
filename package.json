@@ -8,8 +8,8 @@
     "lint": "cd docs && next lint"
   },
   "dependencies": {
-    "@keystatic/core": "^0.0.66",
-    "@keystatic/next": "^0.0.4",
+    "@keystatic/core": "^0.0.68",
+    "@keystatic/next": "^0.0.5",
     "@markdoc/markdoc": "^0.2.2",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",

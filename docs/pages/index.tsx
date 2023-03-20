@@ -25,7 +25,9 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DocsContent>
-        {home.content && <DocumentRenderer document={home.content} />}
+        <div className="prose">
+          {home.content && <DocumentRenderer document={home.content} />}
+        </div>
       </DocsContent>
     </>
   );

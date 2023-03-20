@@ -30,7 +30,9 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DocsContent>
-        {post.content && <DocumentRenderer document={post.content} />}
+        <div className="prose">
+          {post.content && <DocumentRenderer document={post.content} />}
+        </div>
       </DocsContent>
     </>
   );
