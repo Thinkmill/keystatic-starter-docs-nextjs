@@ -6,6 +6,7 @@ import Head from "next/head";
 import { DocsContent } from "../components/content";
 import { inject } from "@/utils/slug-helpers";
 import config from "../keystatic.config";
+import { Button } from "@keystatic-starter-docs/button";
 
 const reader = createReader("", config);
 
@@ -26,6 +27,7 @@ export default function Home({
       </Head>
       <DocsContent>
         <div className="prose">
+          <Button />
           {home.content && <DocumentRenderer document={home.content} />}
         </div>
       </DocsContent>

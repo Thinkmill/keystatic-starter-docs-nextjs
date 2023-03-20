@@ -1,8 +1,9 @@
 {
-  "name": "button",
+  "name": "@keystatic-starter-docs/button",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/button.cjs.js",
+  "module": "dist/button.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
