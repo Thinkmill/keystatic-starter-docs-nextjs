@@ -6,7 +6,8 @@
     "build": "cd docs && pnpm next build",
     "build:packages": "preconstruct build",
     "start": "cd docs && pnpm next start",
-    "lint": "cd docs && pnpm next lint"
+    "lint": "cd docs && pnpm next lint",
+    "postinstall": "preconstruct dev"
   },
   "private": true,
   "preconstruct": {
