@@ -33,6 +33,27 @@ export default config({
     }),
   },
   collections: {
+    components: collection({
+      label: "Components",
+      path: "packages/*/docs",
+      slugField: "title",
+      schema: {
+        title: fields.slug({
+          name: {
+            label: "Title",
+            validation: {
+              length: {
+                min: 1,
+              },
+            },
+          },
+        }),
+        content: fields.document({
+          label: "Content",
+          formatting: true,
+        }),
+      },
+    }),
     pages: collection({
       label: "Pages",
       path: "docs/content/pages/*/",
