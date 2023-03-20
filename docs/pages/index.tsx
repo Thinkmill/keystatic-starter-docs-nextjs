@@ -5,7 +5,6 @@ import Head from "next/head";
 import { reader } from "@/utils/reader";
 import { DocsContent } from "../components/content";
 import { inject } from "@/utils/slug-helpers";
-import { Button } from "@keystatic-starter-docs/button";
 
 export type PostProps = InferGetStaticPropsType<
   typeof getStaticProps
@@ -24,7 +23,6 @@ export default function Home({
       </Head>
       <DocsContent>
         <div className="prose">
-          <Button />
           {home.content && <DocumentRenderer document={home.content} />}
         </div>
       </DocsContent>
