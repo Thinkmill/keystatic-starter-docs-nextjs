@@ -37,3 +37,6 @@ next-env.d.ts
 
 # Code editor settings
 .vscode
+
+# Preconstruct build output
+dist
