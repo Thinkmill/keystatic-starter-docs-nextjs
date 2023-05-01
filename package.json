@@ -2,11 +2,11 @@
   "name": "@keystatic-starter-docs/repo",
   "version": "0.1.0",
   "scripts": {
-    "dev": "cd docs && pnpm next dev",
-    "build": "cd docs && pnpm next build",
+    "dev": "pnpm --filter @keystatic-starter-docs/docs dev",
+    "build:docs": "pnpm --filter @keystatic-starter-docs/docs build",
     "build:packages": "preconstruct build",
-    "start": "cd docs && pnpm next start",
-    "lint": "cd docs && pnpm next lint",
+    "start": "pnpm --filter @keystatic-starter-docs/docs start",
+    "lint": "pnpm --filter @keystatic-starter-docs/docs lint",
     "postinstall": "preconstruct dev"
   },
   "private": true,

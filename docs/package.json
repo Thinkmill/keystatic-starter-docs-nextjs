@@ -1,14 +1,13 @@
 {
   "name": "@keystatic-starter-docs/docs",
   "version": "1.0.0",
-  "description": "",
-  "main": "next.config.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@keystatic-starter-docs/button": "0.0.1",
     "@keystatic/core": "^0.0.68",
